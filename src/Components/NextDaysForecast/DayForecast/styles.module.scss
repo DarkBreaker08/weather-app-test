@@ -1,0 +1,17 @@
+.dayForecast {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.reduceMarginStyle {
+  margin: 0;
+}
+
+.higestAndSmallestTemperatures {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
