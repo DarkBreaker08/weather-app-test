@@ -1,5 +1,9 @@
 .temperature {
   font-size: 60px;
+
+  @media (max-width: 900px) {
+    font-size: 50px;
+  }
 }
 
 .humidity {
@@ -8,6 +12,10 @@
   flex-direction: column;
   align-items: center;
   font-weight: lighter;
+  @media (max-width: 900px) {
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
 .cloudy {
@@ -16,6 +24,10 @@
   flex-direction: column;
   align-items: center;
   font-weight: lighter;
+  @media (max-width: 900px) {
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
 .wind {
@@ -24,6 +36,10 @@
   flex-direction: column;
   align-items: center;
   font-weight: lighter;
+  @media (max-width: 900px) {
+    text-align: center;
+    font-size: 14px;
+  }
 }
 
 .pressure {
@@ -32,4 +48,9 @@
   flex-direction: column;
   align-items: center;
   font-weight: lighter;
+
+  @media (max-width: 900px) {
+    text-align: center;
+    font-size: 14px;
+  }
 }
