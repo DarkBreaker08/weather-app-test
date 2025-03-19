@@ -1,4 +1,4 @@
-export const apiKey = "db83b7ac88a44bcc83d175016252101";
+export const apiKey = "53220a6e92904d038eb153022251903";
 
 export const months = [
   "January",
