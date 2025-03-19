@@ -1,10 +1,18 @@
 .nextDaysForecast {
   list-style: none;
   margin-top: 0;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
 
 .title {
   @media (max-width: 900px) {
     text-align: center;
+  }
+
+  @media (max-width: 400px) {
+    display: none;
   }
 }
