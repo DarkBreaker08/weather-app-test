@@ -17,7 +17,7 @@ export const WeatherParameters = ({
     <div className={styles.weatherParameters}>
       <CitySelect onCityChange={onCityChange} />
       <WeatherStatistics data={data as WeatherData} />
-      <NextDaysForecast />
+      <NextDaysForecast data={data as WeatherData} />
     </div>
   );
 };

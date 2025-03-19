@@ -9,4 +9,17 @@ export type WeatherData = {
       text: string;
     };
   };
+
+  forecast: {
+    forecastday: {
+      date: string;
+      day: {
+        condition: {
+          text: string;
+        };
+        mintemp_c: number;
+        maxtemp_c: number;
+      };
+    }[];
+  };
 };
