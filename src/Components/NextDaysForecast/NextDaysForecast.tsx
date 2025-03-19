@@ -9,7 +9,6 @@ type NextDaysForecastProps = {
 
 export const NextDaysForecast = ({ data }: NextDaysForecastProps) => {
   const days = data.forecast.forecastday;
-  console.log(data);
   const dateValues = {
     firstDayDate: new Date(days[0].date),
     secondDayDate: new Date(days[1].date),

@@ -19,7 +19,7 @@ export const Weather = () => {
     get(
       `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=6&aqi=no`
     );
-  }, []);
+  }, [city]);
 
   if (loading) return <Loading />;
 
