@@ -2,3 +2,9 @@
   list-style: none;
   margin-top: 0;
 }
+
+.title {
+  @media (max-width: 900px) {
+    text-align: center;
+  }
+}

@@ -45,7 +45,7 @@ export const NextDaysForecast = ({ data }: NextDaysForecastProps) => {
 
   return (
     <>
-      <h2>Next days forecast</h2>
+      <h2 className={styles.title}>Next days forecast</h2>
 
       <ul className={styles.nextDaysForecast}>
         <DayForecast
