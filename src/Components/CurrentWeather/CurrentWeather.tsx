@@ -23,8 +23,6 @@ export const CurrentWeather = () => {
         currentMinutes: date.getMinutes(),
       });
     }, 60000);
-
-    return clearInterval(interval);
   }, []);
 
   const {

@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 import { useApi } from "../../hooks/useApi";
 import { apiKey } from "../../utils/dateElements";
 import { Loading } from "../Loading/Loading";
+import { WeatherData } from "../../types/types";
 
 export const Weather = () => {
   const [city, setCity] = useState<string>("Warsaw");
@@ -12,7 +13,7 @@ export const Weather = () => {
   const onCityChange = (cityName: string) => {
     setCity(cityName);
   };
-  const { get, loading, data } = useApi();
+  const { get, loading, data } = useApi<WeatherData>();
 
   useEffect(() => {
     get(
@@ -25,7 +26,10 @@ export const Weather = () => {
   return (
     <header className={styles.weather}>
       <CurrentWeather />
-      <WeatherParameters onCityChange={onCityChange} />
+      <WeatherParameters
+        onCityChange={onCityChange}
+        data={data as WeatherData}
+      />
     </header>
   );
 };
