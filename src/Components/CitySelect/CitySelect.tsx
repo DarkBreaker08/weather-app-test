@@ -1,8 +1,23 @@
+import { ChangeEvent } from "react";
 import styles from "./styles.module.scss";
 
-export const CitySelect = () => {
+type CitySelectProps = {
+  onCityChange: (cityName: string) => void;
+};
+
+export const CitySelect = ({ onCityChange }: CitySelectProps) => {
+  const handleCityChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    const city = e.target.value;
+    onCityChange(city);
+  };
+
   return (
-    <select name="cities" id="citySelect" className={styles.citySelect}>
+    <select
+      name="cities"
+      id="citySelect"
+      className={styles.citySelect}
+      onChange={handleCityChange}
+    >
       <option value="Warsaw">Warsaw, Poland</option>
       <option value="London">London, Great Britain</option>
       <option value="Moscow">Moscow, Russia</option>

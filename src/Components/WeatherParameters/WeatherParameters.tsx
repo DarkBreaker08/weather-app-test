@@ -3,10 +3,14 @@ import { NextDaysForecast } from "../NextDaysForecast/NextDaysForecast";
 import { WeatherStatistics } from "../WeatherStatistics/WeatherStatistics";
 import styles from "./styles.module.scss";
 
-export const WeatherParameters = () => {
+type WeatherParametersProps = {
+  onCityChange: (cityName: string) => void;
+};
+
+export const WeatherParameters = ({ onCityChange }: WeatherParametersProps) => {
   return (
     <div className={styles.weatherParameters}>
-      <CitySelect />
+      <CitySelect onCityChange={onCityChange} />
       <WeatherStatistics />
       <NextDaysForecast />
     </div>
