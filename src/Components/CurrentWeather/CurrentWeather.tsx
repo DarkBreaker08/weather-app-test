@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { months } from "../../utils/dateElements";
+import { WeatherData } from "../../types/types";
 
-export const CurrentWeather = () => {
+type CurrentWeatherProps = {
+  data: WeatherData;
+};
+
+export const CurrentWeather = ({ data }: CurrentWeatherProps) => {
   const currentDate = new Date();
   const [currentDateValues, setCurrentDateValues] = useState({
     currentYear: currentDate.getFullYear(),
@@ -13,7 +18,7 @@ export const CurrentWeather = () => {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    setInterval(() => {
       const date = new Date();
       setCurrentDateValues({
         currentYear: date.getFullYear(),
@@ -35,7 +40,7 @@ export const CurrentWeather = () => {
 
   return (
     <div className={styles.currentWeather}>
-      <h1 className={styles.weatherInfo}></h1>
+      <h1 className={styles.weatherInfo}>{data.current.condition.text}</h1>
       <div className={styles.currentTimeData}>
         <div className="currentDate">
           {dayOfTheMonth} {currentMonth} {currentYear}

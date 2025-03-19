@@ -25,7 +25,7 @@ export const Weather = () => {
 
   return (
     <header className={styles.weather}>
-      <CurrentWeather />
+      <CurrentWeather data={data as WeatherData} />
       <WeatherParameters
         onCityChange={onCityChange}
         data={data as WeatherData}
