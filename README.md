@@ -1,1 +1,1 @@
-Just some test weather app!
+Weather Forecast Application which is fetching for weather data (https://www.weatherapi.com). It displays all important stuff about weather conditions in various city and user can choose which one he wants to check from static list. Project is made in pure React to show the author's skills in state management, API communication and proper hook implementation. To create this project author used vite bundler combined with babel library.
